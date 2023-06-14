@@ -16,12 +16,12 @@ pipeline {
             steps {
                 sh 'sudo cp ${WORKSPACE}/target/spring-petclinic-3.0.0-SNAPSHOT.jar /home/spring/spring-petclinic'
             }
-        }
+        }*/
         stage('apply playbook') {
             steps {
                 sh 'ansible-playbook -i hosts spring-petclinic.yaml'
             }
-        }*/
+        }
         
     }
 }
