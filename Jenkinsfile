@@ -11,12 +11,7 @@ pipeline {
             steps {
                 sh 'cd ${WORKSPACE} && ./mvnw package'
             }
-        }/*
-        stage('copy build package') {
-            steps {
-                sh 'sudo cp ${WORKSPACE}/target/spring-petclinic-3.0.0-SNAPSHOT.jar /home/spring/spring-petclinic'
-            }
-        }*/
+        }
         stage('apply playbook') {
             steps {
                 sh 'ansible -i hosts -m ping all'
