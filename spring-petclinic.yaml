@@ -41,7 +41,6 @@
         dest: /etc/systemd/system/spc.service
         owner: spring
         group: spring
-        recurse: yes
         mode: '0755'
     - name: restart spc service
       ansible.builtin.systemd:
