@@ -1,5 +1,5 @@
 pipeline {
-    agent { node { { label 'ansible_jenkins' } } }
+    agent { label 'ansible_jenkins' }
     stages {
         stage('clone sources') {
             steps {
