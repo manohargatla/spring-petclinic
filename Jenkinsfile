@@ -6,7 +6,7 @@ pipeline {
                 git branch: 'main',
                 url: 'https://github.com/manohargatla/spring-petclinic.git' 
             }
-        }
+        }/*
         stage('build package') {
             steps {
                 sh 'cd spring-petclinic/'
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 sh 'ansible-playbook -i hosts spring-petclinic.yaml'
             }
-        }
+        }*/
         
     }
 }
